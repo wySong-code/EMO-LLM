@@ -1,0 +1,6 @@
+[2026-10-30 16:03:02] cache entries: 2973
+[2026-10-30 16:03:02] card=1 micro_batch=4 eval_batch=8
+[2026-10-30 22:13:48] sft finished
+  "best_local_score": 0.9055042694078779,
+  "updated_utc": "2026-10-30T22:13:48.025007+00:00"
+}

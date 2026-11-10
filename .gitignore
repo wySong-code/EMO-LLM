@@ -1,0 +1,56 @@
+# ─── 基座模型与镜像（11.4 GB + 859 MB）──────────────────────────
+base_model/
+model_repo/
+.hf-cache/
+
+# ─── 训练数据与媒体素材（2.6 GB + 1.3 GB，不可随仓库分发）─────────
+training_dataset/
+media/
+media.tar
+*.tar
+*.tar.gz
+
+# ─── 权重与检查点（约 1.2 GB）──────────────────────────────────
+**/checkpoints/
+**/*.safetensors
+**/*.bin
+**/*.pt
+**/*.pth
+**/optimizer.pt
+**/scheduler.pt
+
+# ─── 分词器副本（Qwen2.5-Omni 基座自带，3 份共 45 MB，无独立价值）──────
+# 需要时从基座模型目录拷回即可；adapter_config.json 等小文件仍保留
+**/adapter_*/tokenizer.json
+**/adapter_*/vocab.json
+**/adapter_*/merges.txt
+
+# ─── 个人运维脚本、脱敏工具（2026-11-10 已从仓库删除）────────────────
+# 这些文件已不存在，不再需要忽略规则；若在别处重建，请勿提交。
+
+# ─── 重算时的临时备份（`.prev` 是上一版产物，已被新表取代）─────────────
+*.prev
+# xlsx 被预览/编辑占用时的中间落盘件，替换成功后即删
+_audit/_out_xlsx.xlsx
+
+# ─── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ─── 系统与编辑器 ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ─── 保留说明 ─────────────────────────────────────────────────
+# 以下内容**要**入库，不要排除：
+#   reports/*.csv, runs/*/step_*_metrics.json, runs/*/step_*_predictions.jsonl
+#   submissions/*/submission.csv, submissions/*/predictions_raw.jsonl
+#   _audit/*.py, _audit/*.csv, docs/*.md
+# 它们是复现全部结论的唯一依据（见 docs/01_实验结果总表.md）。
+_audit/_msg.txt

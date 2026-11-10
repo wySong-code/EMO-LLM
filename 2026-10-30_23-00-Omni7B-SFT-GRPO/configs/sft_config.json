@@ -1,0 +1,69 @@
+{
+  "experiment": "omni7b-combined-sft-20261030",
+  "purpose": "把课程基线的 Combined-SFT 配方原样搬到 Qwen2.5-Omni-7B，作为 7B 侧的可对比起点",
+  "reference_run": {
+    "path": "2026-10-29_14-21-GRPO / model_repo (Qwen2.5-Omni-3B)",
+    "trainable_parameters_3b": 54192128,
+    "kaggle_public": 0.93049,
+    "validation_local_score": 0.89147
+  },
+  "model": {
+    "path": "~/MM-LLMs-Emotion-main/models/Qwen2.5-Omni-7B",
+    "model_id": "Qwen/Qwen2.5-Omni-7B",
+    "class": "Qwen2_5OmniThinkerForConditionalGeneration",
+    "source": "ModelScope snapshot_download",
+    "precision": "bfloat16 base + float32 LoRA",
+    "attention": "sdpa",
+    "gradient_checkpointing": "non-reentrant"
+  },
+  "data": {
+    "dataset_root": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/training_dataset/Dataset",
+    "mixture": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/training_dataset/data",
+    "train_records": 3352,
+    "validation_records": 666,
+    "mixed_examples_per_epoch": 8730,
+    "task_mix": {
+      "full_VT_VA": {"n": 3352, "loss_weight": "2/3"},
+      "vision_only": {"n": 2103, "loss_weight": "1/9"},
+      "text_only": {"n": 1702, "loss_weight": "1/9"},
+      "audio_only": {"n": 1573, "loss_weight": "1/9"}
+    },
+    "split_policy": "沿用课程原有 train/val 划分，排除 2 条与验证视频重复的训练记录"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 1e-4,
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "seed": 42
+  },
+  "batching": {
+    "effective_batch": 16,
+    "optimizer_steps_per_epoch": 546,
+    "epochs": 3,
+    "total_optimizer_steps": 1638,
+    "micro_batch_note": "3B 用 microbatch 4；7B 按内存探针结果下调 micro-batch，梯度累积补足到 16"
+  },
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "targets": "语言 attention/MLP + visual.blocks + audio_tower.layers 全部 Linear",
+    "frozen": ["base weights", "visual.merger", "audio_tower.proj", "convolutions", "embeddings", "norms", "lm_head"]
+  },
+  "input": {
+    "frames": 8,
+    "max_side": 448,
+    "audio_rate": 16000,
+    "max_length": 4096,
+    "truncation": "禁止：超长直接报错"
+  },
+  "evaluation": {
+    "decode": "greedy",
+    "max_new_tokens": 192,
+    "records": 666,
+    "selection": "三轮验证中取 local_score 最高者，平局取更早的 epoch"
+  }
+}

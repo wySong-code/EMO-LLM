@@ -1,0 +1,9 @@
+{
+  "step": 250,
+  "score": 0.9075586264047802,
+  "emotion_f1": 0.9570091447014524,
+  "conflict_recall": 0.8108108108108109,
+  "aligned_specificity": 0.9290540540540541,
+  "floor": 0.9361436739508909,
+  "eligible": true
+}

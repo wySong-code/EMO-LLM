@@ -1,0 +1,27 @@
+{
+  "stage": "train",
+  "gpu": "GPU",
+  "total_gib": 23.516,
+  "free_before_gib": 23.117,
+  "base_weights_gib": 16.644,
+  "trainable_parameters": 64628736,
+  "weights_plus_lora_gib": 16.885,
+  "train": [
+    {
+      "rows": 4,
+      "tokens": 845,
+      "logits_gib": 0.957,
+      "ok": true,
+      "seconds": 4.04,
+      "peak_gib": 20.261
+    },
+    {
+      "rows": 3,
+      "tokens": 837,
+      "logits_gib": 0.711,
+      "ok": true,
+      "seconds": 2.38,
+      "peak_gib": 19.408
+    }
+  ]
+}

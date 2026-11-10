@@ -1,0 +1,20 @@
+[
+  {
+    "global_step": 546,
+    "epoch": 1,
+    "path": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/sft_run/train/checkpoints/checkpoint-546",
+    "updated_utc": "2026-10-30T18:02:54.026516+00:00"
+  },
+  {
+    "global_step": 1092,
+    "epoch": 2,
+    "path": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/sft_run/train/checkpoints/checkpoint-1092",
+    "updated_utc": "2026-10-30T20:05:51.009328+00:00"
+  },
+  {
+    "global_step": 1638,
+    "epoch": 3,
+    "path": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/sft_run/train/checkpoints/checkpoint-1638",
+    "updated_utc": "2026-10-30T22:08:26.490576+00:00"
+  }
+]

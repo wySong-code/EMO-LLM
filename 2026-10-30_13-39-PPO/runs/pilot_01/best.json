@@ -1,0 +1,36 @@
+{
+  "source": "runs/pilot_01/checkpoints/attempt_0100",
+  "attempt": 100,
+  "score": 0.8907745551995174,
+  "emotion_f1": 0.9477653266152511,
+  "conflict_recall": 0.7837837837837838,
+  "aligned_specificity": 0.9087837837837838,
+  "eligible": true,
+  "improved": true,
+  "original_covered": 143,
+  "update": {
+    "policy_loss": -0.044043,
+    "value_loss": 0.006881,
+    "kl": 0.002655,
+    "clip_fraction": 0.0,
+    "tokens": 208,
+    "policy_grad_norms": [
+      0.06574,
+      0.061241
+    ],
+    "value_grad_norms": [
+      0.710658,
+      0.420029
+    ]
+  },
+  "rollouts": {
+    "invalid_candidates": 0,
+    "perfect": 335,
+    "decision_correct": 388,
+    "fused_correct": 347,
+    "attempts": 100,
+    "rollouts": 400,
+    "optimizer_steps": 200
+  },
+  "mean_reward": 0.9369
+}

@@ -1,0 +1,19 @@
+{
+  "attempt": 100,
+  "score": 0.8852251654203327,
+  "emotion_f1": 0.9386935740839086,
+  "conflict_recall": 0.7837837837837838,
+  "aligned_specificity": 0.9037162162162162,
+  "eligible": true,
+  "improved": true,
+  "original_covered": 75,
+  "rollouts": {
+    "attempts": 100,
+    "candidates": 416,
+    "all_correct": 53,
+    "decision_variant": 9,
+    "invalid_candidates": 0,
+    "active": 47,
+    "optimizer_steps": 94
+  }
+}

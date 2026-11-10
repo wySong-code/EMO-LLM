@@ -1,0 +1,9 @@
+experiment,scale,algo,unit,total_units,n_checkpoints,sft_start_official,best_official,best_at,last_official,best_local,best_local_at,kaggle_best,kaggle_at,mean_grad_group_rate,mean_zero_spread_rate,mean_reward
+3B-GRPO-r1,3B,GRPO,step,300,6,0.922292,0.928091,step 50,0.919901,0.893406,step 50,0.93638,step 50,0.188333,0.811667,0.966646
+3B-GRPO-r2,3B,GRPO(配额改造),attempt,600,6,0.919944,0.922039,attempt 400,0.918194,0.895908,attempt 300,,,0.321667,0.678333,0.939552
+3B-PPO,3B,PPO(带 critic),attempt,300,3,0.922292,0.924108,attempt 100,0.917877,0.893552,attempt 300,,,0.0,,0.947667
+3B-SFT,3B,SFT,step,1,1,0.922292,0.922292,起点(未训练),0.922292,0.884004,起点(未训练),0.93049,起点(未训练),,,
+7B-DAPO,7B,DAPO,step,300,6,0.940752,0.937556,step 50,0.933028,0.919887,step 200,0.93345,step 50,0.109565,0.879444,0.981378
+7B-DAPO-legacy,7B,DAPO-legacy,step,300,6,0.940752,0.937508,step 50,0.93257,0.918155,step 300,0.9358,step 50,0.111434,0.878111,0.979527
+7B-GRPO,7B,GRPO,step,300,6,0.940752,0.939911,step 200,0.938286,0.909925,step 150,0.93577,step 150,0.1,0.9,0.988385
+7B-SFT,7B,SFT,epoch,3,3,0.940752,0.947899,epoch 2,0.94154,0.905504,epoch 3,0.93243,epoch 3,,,

@@ -1,0 +1,13 @@
+{
+  "measured": {
+    "audio": 11796480,
+    "vision": 12462080,
+    "language": 40370176
+  },
+  "reference_3b": {
+    "language": 29933568,
+    "vision": 12462080,
+    "audio": 11796480
+  },
+  "identical_encoders": true
+}

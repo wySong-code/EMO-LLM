@@ -1,0 +1,29 @@
+{
+  "step": 3,
+  "adapter_updates_l1": {
+    "audio": 0.06108077988028526,
+    "vision": 0.06555502116680145,
+    "language": 0.27835774421691895
+  },
+  "gradient_norm": 5.825483322143555,
+  "gradients": {
+    "language": {
+      "norm": 4.283194541931152,
+      "parameters_with_grad": 392
+    },
+    "vision": {
+      "norm": 3.9161322116851807,
+      "parameters_with_grad": 448
+    },
+    "audio": {
+      "norm": 0.5043860673904419,
+      "parameters_with_grad": 384
+    }
+  },
+  "initial_adapter": null,
+  "micro_batch": 4,
+  "effective_batch": 16,
+  "trainable_weights_finite": true,
+  "wandb_url": "",
+  "updated_utc": "2026-10-30T16:04:37.048115+00:00"
+}

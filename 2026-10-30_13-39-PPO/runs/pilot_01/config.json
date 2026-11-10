@@ -1,0 +1,83 @@
+{
+  "dataset_root": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/training_dataset/Dataset",
+  "base": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/base_model",
+  "adapter": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/model_repo",
+  "out": "runs/pilot_01",
+  "media_cache": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_13-39-PPO/media_cache",
+  "check_data": false,
+  "check_env": false,
+  "smoke_test": false,
+  "allow_version_mismatch": false,
+  "reference_device": "cuda:1",
+  "attempts": 300,
+  "batch_prompts": 4,
+  "temperature": 1.2,
+  "top_p": 0.95,
+  "max_new_tokens": 128,
+  "lr": 2e-06,
+  "value_lr": 0.001,
+  "kl_beta": 0.02,
+  "clip_eps": 0.2,
+  "value_clip": 0.2,
+  "value_coef": 0.5,
+  "ppo_epochs": 2,
+  "gamma": 1.0,
+  "gae_lambda": 0.95,
+  "eval_every": 100,
+  "eval_batch_size": 4,
+  "patience": 3,
+  "f1_drop_guard": 0.01,
+  "specificity_drop_guard": 0.01,
+  "seed": 42,
+  "reference_device_resolved": "cuda:1",
+  "environment": {
+    "python": "3.12.3",
+    "modules": {
+      "torch": true,
+      "transformers": true,
+      "peft": true,
+      "accelerate": true,
+      "av": true,
+      "numpy": true,
+      "soundfile": true,
+      "imageio_ffmpeg": true,
+      "PIL": true,
+      "safetensors": true
+    },
+    "versions": {
+      "torch": "2.8.0",
+      "transformers": "4.57.6",
+      "peft": "0.17.1",
+      "accelerate": "1.15.0"
+    },
+    "cuda": true,
+    "gpu_count": 2,
+    "gpu_names": [
+      "GPU",
+      "GPU"
+    ],
+    "bf16": true,
+    "versions_match": true,
+    "ready": true
+  },
+  "data": {
+    "train": 3352,
+    "val": 666,
+    "train_buckets": {
+      "Aligned|VA|False": 1501,
+      "Aligned|VT|False": 1336,
+      "Aligned|VT|True": 104,
+      "Conflict|VA|False": 36,
+      "Conflict|VA|True": 36,
+      "Conflict|VT|False": 107,
+      "Conflict|VT|True": 232
+    }
+  },
+  "assets": {
+    "model_type": "qwen2_5_omni",
+    "base_shards": 3,
+    "adapter_tensors": 1336,
+    "adapter_parameters": 54192128,
+    "adapter_dtype": "F32"
+  }
+}

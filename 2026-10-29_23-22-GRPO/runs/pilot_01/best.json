@@ -1,0 +1,21 @@
+{
+  "source": "runs/pilot_01/checkpoints/attempt_0300",
+  "attempt": 300,
+  "score": 0.895908357750463,
+  "emotion_f1": 0.9445194182036287,
+  "conflict_recall": 0.8108108108108109,
+  "aligned_specificity": 0.902027027027027,
+  "eligible": true,
+  "improved": true,
+  "original_covered": 143,
+  "rollouts": {
+    "attempts": 300,
+    "candidates": 1244,
+    "all_correct": 178,
+    "decision_variant": 17,
+    "invalid_candidates": 0,
+    "active": 120,
+    "optimizer_steps": 240,
+    "all_same_not_perfect": 2
+  }
+}

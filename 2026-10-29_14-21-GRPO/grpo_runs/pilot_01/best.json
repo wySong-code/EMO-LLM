@@ -1,0 +1,10 @@
+{
+  "source": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/grpo_runs/pilot_01/checkpoints/step_0050",
+  "step": 50,
+  "score": 0.8934058741313016,
+  "emotion_f1": 0.9510009374517925,
+  "conflict_recall": 0.7837837837837838,
+  "aligned_specificity": 0.9138513513513513,
+  "floor": 0.9303051260036419,
+  "eligible": true
+}

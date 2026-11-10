@@ -1,0 +1,88 @@
+# -*- coding: utf-8 -*-
+"""生成 report_completeness.csv —— 本地数据完整性核查表（进 xlsx 的 11_完整性 sheet）
+
+数据来源：2026-11-10 逐文件实测（见 docs/08_本地数据完整性核查.md）。
+本脚本只写结论表，所有数字来自本目录各核查脚本的实测输出，不要手改。
+"""
+from pathlib import Path
+import csv
+
+AUDIT = Path(__file__).resolve().parent
+OUT = AUDIT / "report_completeness.csv"
+
+ROWS = [
+    # 类别, 状态, 规模, 覆盖, 备注
+    ("【证据链】", "", "", "", ""),
+    ("训练主日志", "完整", "23 份 / 55,675 行", "8 次训练全覆盖",
+     "含 1 份 60 行环境自检；DAPO 两臂 12,081/12,079 行；r1 与 7B-GRPO 各 6,764；r2 6,557；PPO 4,595；7B-SFT 1,912"),
+    ("检查点指标 metrics.json", "完整", "42 份 × 5 子集", "37 检查点 + 5 个 SFT 基线",
+     "每份含 all / VT / VA / original / generated"),
+    ("验证集逐样本预测", "完整", "42 份 / 27,972 条", "全部 666 条，无截断",
+     "每份含 pred_emotion / is_conflict / 生成文本"),
+    ("测试集逐样本预测", "完整", "8 份 / 5,872 条", "全部 734 条", "对应 8 个提交模型"),
+    ("训练集预筛预测", "完整", "2 份 / 6,704 条", "DAPO 两臂各 3,352", "用于判断 SFT 是否已背完训练集"),
+    ("奖励明细 rollouts.jsonl", "完整", "6 份 / 5,548 组", "r1 600、r2 600、PPO 300、7B-GRPO 600、DAPO 1725+1723",
+     "含每组 8 候选的逐条奖励与 decision_correct"),
+    ("DAPO 周期记录 cycles.jsonl", "完整", "2 份 / 600 周期", "两臂各 300",
+     "含 updates / groups / buckets / clip 计数；loss 与 KL 不在此文件"),
+    ("SFT 逐步训练指标", "完整", "1 份 / 1,638 步", "7B SFT 三步 epoch 全覆盖",
+     "loss 与 gradient_norm 逐步齐全——全库唯一有优化侧数值的 SFT"),
+    ("运行配置快照", "完整", "12 个 run", "config.json + best.json",
+     "绝对路径已归一化为 ~/ 形式"),
+    ("提交文件", "完整", "8 份 submission.csv + 8 份 summary.json", "5 个模型 / 8 个检查点",
+     "DAPO 两臂的提交为 2026-11-05 16:38 事后补导出"),
+    ("训练与测试数据", "完整", "2,554 文件 / 2.5 GB", "training_dataset/",
+     "含 media.tar 1.27 GB、Dataset/ 2,517 文件"),
+    ("基座模型", "完整", "3 个分片 / 11.4 GB", "base_model/", "可直接加载"),
+    ("汇总分析 CSV", "完整", "11 份 / 5.4 万行", "_audit/*.csv", "全部由本地原始文件离线复算"),
+    ("文档与图", "完整", "9 篇 md + 1 xlsx(12 sheet) + 8 张 png", "docs/", "含本核查表"),
+
+    ("【A 类缺口·可补】检查点权重", "", "", "", ""),
+    ("3B GRPO r1 权重", "缺 5 / 6", "≈1.0 GB", "本地仅 step_0050",
+     "缺 step_0100/0150/0200/0250/0300，未归档"),
+    ("3B GRPO r2 权重", "缺 5 / 6", "≈1.0 GB", "本地仅 attempt_0300",
+     "缺 attempt_0100/0200/0400/0500/0600"),
+    ("3B PPO 权重", "缺 2 / 3", "≈0.4 GB", "本地仅 attempt_0100", "缺 attempt_0200/0300"),
+    ("7B GRPO 权重", "完整 3 / 3", "0.74 GB", "sft7b + grpo50 + grpo150", "唯一权重齐全的 RL 轮次"),
+    ("DAPO 两臂权重", "缺 12 / 12", "≈3.0 GB", "本地无", "两臂 step_0050~0300，含 optimizer.pt"),
+    ("权重缺口影响面", "—", "共 24 个 / ≈5.3 GB", "—",
+     "只影响「重新推理 / 接着训练」；指标、预测、日志齐备，汇报与复算零影响"),
+
+    ("【B 类缺口·永久不可补】优化侧标量", "", "", "", ""),
+    ("loss / KL / grad_norm（5 臂）", "永久缺失", "0 条记录", "r1、r2、7B-GRPO、DAPO×2",
+     "训练脚本算了但未落盘；全日志 grep 命中 0 次；全库无 wandb/tensorboard → 任何残留都无法还原"),
+    ("同上 · 3B PPO", "有", "300 attempt", "rollouts.jsonl 的 update 字典",
+     "含 policy_loss / value_loss / kl / clip_fraction / grad_norms"),
+    ("同上 · 7B SFT", "有", "1,638 步", "sft_train.log + train_metrics.jsonl", "loss + gradient_norm"),
+    ("替代方案", "—", "—", "—",
+     "用 rollouts 的组内奖励方差、零方差比例、有梯度组数作代理；若要真曲线只能重训并显式记录（每臂 ≥1 天）"),
+
+    ("【C 类缺口·不必补】重复素材", "", "", "", ""),
+    ("7B sft_run/dataset_view", "未归档", "2,974 文件 / 1,490 MB", "—",
+     "training_dataset 的 videos + wav 副本，非新增信息"),
+    ("各 submission 的 frames/", "未归档", "7 × 1,263 文件 / 513 MB", "—", "测试集抽帧缓存，可随时重生成"),
+
+    ("【D 类缺口·过场】", "", "", "", ""),
+    ("r1 之前的 7 个 smoke 目录", "未归档", "20 文件 / 数十 KB", "grpo_runs/",
+     "smokeB/C/D/E 等，仅 policy/reference 加载校验"),
+    ("PPO 阈值校准日志", "未归档", "226 KB", "pilot_01.log.calibration", "校准过程，可补"),
+    ("7B preflight + input_checks", "未归档", "27.7 MB", "sft_run/preflight + train/input_checks.jsonl",
+     "数据管线校验，可补"),
+    ("DAPO 两臂提交日志", "未归档", "0.2 MB", "logs/submission_*.log", "建议补：唯一能证明提交动作的日志"),
+    ("废弃 run（aborted / doomed）", "未归档", "18 文件", "r2 与 PPO",
+     "aborted.try3/try6、doomed_contention、smoke_01，无分析价值"),
+    ("根 _deploy/", "未归档", "11 脚本", "—", "部署脚本，本地已有等价版本"),
+]
+
+
+def main():
+    with open(OUT, "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["类别", "状态", "规模", "覆盖范围", "备注"])
+        for r in ROWS:
+            w.writerow(r)
+    print(f"-> {OUT}  ({len(ROWS)} 行)")
+
+
+if __name__ == "__main__":
+    main()

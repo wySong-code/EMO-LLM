@@ -1,0 +1,18 @@
+{
+  "rows": 734,
+  "submission": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-11-01-DAPO/submissions/dapo7b_step50/submission.csv",
+  "counts": {
+    "emotion_negative": 441,
+    "uncertain_no": 590,
+    "emotion_positive": 293,
+    "uncertain_yes": 144
+  },
+  "infer": {
+    "done": 734,
+    "skipped": 0,
+    "parse_ok": 734,
+    "parse_errors": {},
+    "fallback": 0,
+    "seconds": 1274.6
+  }
+}

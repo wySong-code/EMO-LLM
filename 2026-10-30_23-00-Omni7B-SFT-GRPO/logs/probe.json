@@ -1,0 +1,55 @@
+{
+  "gpu": "GPU",
+  "total_gib": 23.516,
+  "free_before_gib": 23.117,
+  "base": "~/MM-LLMs-Emotion-main/models/Qwen2.5-Omni-7B",
+  "weights_gib": 16.644,
+  "free_after_load_gib": 6.473,
+  "micro_batch": [
+    {
+      "gradient_checkpointing": true,
+      "rows": 4,
+      "prompt_tokens": 845,
+      "logits_gib": 0.957,
+      "ok": false,
+      "error": "CUDA out of memory. Tried to allocate 130.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 16.12 MiB is free. Including non-PyTorch memory, this process has 23.48 GiB memory in use. Of the all",
+      "peak_gib": 22.828
+    },
+    {
+      "gradient_checkpointing": true,
+      "rows": 2,
+      "prompt_tokens": 837,
+      "ok": false,
+      "error": "CUDA out of memory. Tried to allocate 22.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 14.12 MiB is free. Including non-PyTorch memory, this process has 23.48 GiB memory in use. Of the allo",
+      "peak_gib": 22.912
+    },
+    {
+      "gradient_checkpointing": true,
+      "rows": 1,
+      "prompt_tokens": 834,
+      "ok": false,
+      "error": "CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 32.12 MiB is free. Including non-PyTorch memory, this process has 23.46 GiB memory in use. Of the allo",
+      "peak_gib": 22.93
+    }
+  ],
+  "generation": [
+    {
+      "batch_size": 16,
+      "ok": false,
+      "error": "CUDA out of memory. Tried to allocate 90.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 54.12 MiB is free. Including non-PyTorch memory, this process has 23.44 GiB memory in use. Of the allo",
+      "peak_gib": 22.747
+    },
+    {
+      "batch_size": 8,
+      "ok": false,
+      "error": "CUDA out of memory. Tried to allocate 44.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 14.12 MiB is free. Including non-PyTorch memory, this process has 23.48 GiB memory in use. Of the allo",
+      "peak_gib": 22.798
+    },
+    {
+      "batch_size": 4,
+      "ok": false,
+      "error": "CUDA out of memory. Tried to allocate 44.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 16.12 MiB is free. Including non-PyTorch memory, this process has 23.48 GiB memory in use. Of the allo",
+      "peak_gib": 22.868
+    }
+  ]
+}

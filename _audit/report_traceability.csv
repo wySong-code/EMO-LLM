@@ -1,0 +1,11 @@
+数据块,产物文件,规模,生成脚本,复算命令,原始来源
+评测：37 检查点全指标,_audit/curves_checkpoints_all.csv,37 行,build_all_curves.py,python _audit/build_all_curves.py,37 个 *_metrics.json（各实验 runs/ 下的评测输出）
+评测：子集拆解,_audit/report_metrics_by_subset.csv,185 行,build_report_pack.py,python _audit/build_report_pack.py,同上，取 metrics.json 里的 all/VT/VA/original/generated 五个子字典
+训练信号：逐步组级,_audit/curves_train_signals.csv,"31,175 行",build_all_curves.py,python _audit/build_all_curves.py,各实验 cycles.jsonl + 日志 STEP/PROGRESS 行
+奖励侧：逐步,_audit/curves_reward_per_step.csv,"2,100 行",build_reward_curves.py,python _audit/build_reward_curves.py,各实验 rollouts.jsonl（每组 8 候选的 rewards 数组离线重算）
+优化侧：逐步,_audit/curves_optimizer_side.csv,"19,985 行",build_optimizer_curves.py,python _audit/build_optimizer_curves.py,仅 7B SFT train_metrics.jsonl（1638 步）+ 3B PPO rollouts.jsonl 的 update 字典（300 条）
+阶段聚合：5 段,_audit/report_stage_summary.csv,30 行,build_report_pack.py,python _audit/build_report_pack.py,由上面两份逐步表聚合
+阶段聚合：10 段,_audit/report_stage_fine.csv,70 行,build_appendix.py,python _audit/build_appendix.py,同上，按十分位切
+优化侧：按阶段,_audit/report_optimizer_stage.csv,13 行,build_report_pack.py,python _audit/build_report_pack.py,仅 7B SFT 3 epoch + PPO 5 段
+实验矩阵,_audit/report_experiment_matrix.csv,8 行,build_report_pack.py,python _audit/build_report_pack.py,汇总上面各表 + 手工录入的榜分
+显著性：配对 bootstrap,_audit/official_score_bootstrap.csv,16 行,_audit/official_score_bootstrap.py,python _audit/official_score_bootstrap.py,37 检查点两两配对（2000 次重采样）

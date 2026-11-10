@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "name": "文件存在",
+      "ok": true,
+      "detail": "submission_step50_grpo1.csv"
+    },
+    {
+      "name": "表头与第一轮完全一致",
+      "ok": true,
+      "detail": "['sample_id', 'pred_emotion', 'is_uncertain', 'clarifying_question']"
+    },
+    {
+      "name": "行数 == 734",
+      "ok": true,
+      "detail": "734"
+    },
+    {
+      "name": "sample_id 唯一",
+      "ok": true,
+      "detail": "unique=734/734"
+    },
+    {
+      "name": "id 集合与第一轮一致",
+      "ok": true,
+      "detail": "缺失=0 多余=0"
+    },
+    {
+      "name": "id 顺序与第一轮一致",
+      "ok": true,
+      "detail": "一致"
+    },
+    {
+      "name": "pred_emotion 取值合法",
+      "ok": true,
+      "detail": "{'positive', 'negative'}"
+    },
+    {
+      "name": "is_uncertain 取值合法",
+      "ok": true,
+      "detail": "{'yes', 'no'}"
+    },
+    {
+      "name": "clarifying_question 无空值",
+      "ok": true,
+      "detail": "空值数=0"
+    },
+    {
+      "name": "is_uncertain=yes 必带问题",
+      "ok": true,
+      "detail": "违规=0"
+    },
+    {
+      "name": "is_uncertain=no 问题为 none",
+      "ok": true,
+      "detail": "违规=0"
+    }
+  ],
+  "all_pass": true,
+  "rows": 734,
+  "emotion_dist": {
+    "negative": 444,
+    "positive": 290
+  },
+  "uncertain_dist": {
+    "no": 608,
+    "yes": 126
+  },
+  "diff_vs_grpo_r2": {
+    "emotion": 8,
+    "uncertain": 10
+  },
+  "csv_path": "submission_step50_grpo1.csv"
+}

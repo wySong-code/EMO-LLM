@@ -1,0 +1,17 @@
+{
+  "unique_example_ids": true,
+  "all_sources_in_fixed_clean_train": true,
+  "all_full_examples_preserved": true,
+  "no_validation_ids_or_video_paths": true,
+  "course_labels_unchanged": true,
+  "no_missing_modality_targets": true,
+  "all_media_paths_exist": true,
+  "group_loss_weights_verified": true,
+  "visual_deduplication": "Exact video path; not pixel-level matching across different files",
+  "text_deduplication": "Exact original text, without normalization",
+  "audio_deduplication": "Exact source video path among VA records",
+  "media_tensor_and_token_alignment": "Not run; requires the single-modality data loader",
+  "saved_train_manifest_exact": true,
+  "saved_val_manifest_exact": true,
+  "uploaded_pool_matches_course_views": true
+}

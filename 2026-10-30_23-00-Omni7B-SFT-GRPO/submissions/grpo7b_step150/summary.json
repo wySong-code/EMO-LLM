@@ -1,0 +1,18 @@
+{
+  "rows": 734,
+  "submission": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/submissions/grpo7b_step150/submission.csv",
+  "counts": {
+    "emotion_negative": 435,
+    "uncertain_no": 594,
+    "emotion_positive": 299,
+    "uncertain_yes": 140
+  },
+  "infer": {
+    "done": 734,
+    "skipped": 0,
+    "parse_ok": 734,
+    "parse_errors": {},
+    "fallback": 0,
+    "seconds": 1091.8
+  }
+}

@@ -1,0 +1,16 @@
+# 统一行尾，避免 Windows/Linux 交叉提交产生全文件差异
+* text=auto
+
+# 二进制与数据文件不做转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pt binary
+*.bin binary
+*.zip binary
+
+# 数据与日志按文本处理但保留原样
+*.jsonl text
+*.csv text
+*.log text

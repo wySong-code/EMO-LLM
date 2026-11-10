@@ -1,0 +1,35 @@
+{
+  "attempt": 300,
+  "score": 0.8935524664447347,
+  "emotion_f1": 0.9398076355921723,
+  "conflict_recall": 0.8108108108108109,
+  "aligned_specificity": 0.902027027027027,
+  "eligible": false,
+  "improved": false,
+  "original_covered": 143,
+  "update": {
+    "policy_loss": -0.056284,
+    "value_loss": 0.003942,
+    "kl": 0.014275,
+    "clip_fraction": 0.0,
+    "tokens": 208,
+    "policy_grad_norms": [
+      0.071372,
+      0.071874
+    ],
+    "value_grad_norms": [
+      0.639096,
+      1.000395
+    ]
+  },
+  "rollouts": {
+    "invalid_candidates": 0,
+    "perfect": 1041,
+    "decision_correct": 1170,
+    "fused_correct": 1068,
+    "attempts": 300,
+    "rollouts": 1200,
+    "optimizer_steps": 600
+  },
+  "mean_reward": 0.9477
+}

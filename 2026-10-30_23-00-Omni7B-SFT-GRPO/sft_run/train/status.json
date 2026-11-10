@@ -1,0 +1,8 @@
+{
+  "stage": "complete",
+  "step": 1638,
+  "epochs": 3,
+  "best_checkpoint": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/sft_run/train/checkpoints/checkpoint-1638",
+  "best_local_score": 0.9055042694078779,
+  "updated_utc": "2026-10-30T22:13:48.025007+00:00"
+}

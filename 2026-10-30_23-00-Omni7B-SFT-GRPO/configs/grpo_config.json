@@ -1,0 +1,53 @@
+{
+  "experiment": "omni7b-grpo-step300-20261030",
+  "purpose": "在 7B SFT adapter 上复刻 3B 第一轮 GRPO（step_0050 那一版）的全部超参",
+  "reference_run": {
+    "path": "2026-10-29_14-21-GRPO",
+    "best_checkpoint": "checkpoints/step_0050",
+    "validation_local_score": 0.8934,
+    "emotion_macro_f1": 0.9510,
+    "conflict_recall": "58/74",
+    "aligned_specificity": 0.9139
+  },
+  "start_point": {
+    "policy": "2026-10-30_23-00-Omni7B-SFT-GRPO/sft_run/train/checkpoints/<best>",
+    "reference": "同一 adapter，冻结，独立设备",
+    "relation_to_3b": "与 3B 三轮关系一致：都从 SFT 出发，不串在 GRPO 结果之上"
+  },
+  "reward": {
+    "definition": "沿用课程基线与 3B 两轮完全相同的 reward.py，未做任何改动",
+    "weights": {"fused": 0.35, "vision": 0.10, "second_modality": 0.10, "decision": 0.45},
+    "consistency_penalty": -0.05,
+    "invalid_json": -0.20
+  },
+  "sampling": {
+    "prompts_per_step": 2,
+    "candidates_per_prompt": 8,
+    "temperature": 1.1,
+    "top_p": 0.95,
+    "max_new_tokens": 128,
+    "bucket_mix": {"original_conflict": 0.67, "generated_conflict": 0.33, "aligned": "每步固定 1 条"},
+    "advantage": "组内标准化；冲突样本优势乘 1.5"
+  },
+  "optimizer": {
+    "learning_rate": 2e-6,
+    "ppo_epochs_per_batch": 2,
+    "clip_eps": 0.2,
+    "kl_beta": 0.02,
+    "max_grad_norm": 1.0,
+    "seed": 42
+  },
+  "schedule": {
+    "steps": 300,
+    "eval_every": 50,
+    "eval_batch_size": 4,
+    "f1_drop_guard": 0.01,
+    "checkpoint_selection": "综合分最高且 F1 ≥ 基线−0.01 的检查点"
+  },
+  "memory_adaptations": {
+    "policy_card": "策略模型单独承载，开非重入梯度检查点",
+    "reference_card": "参考模型单独承载，纯推理",
+    "logprob": "逐 512 位置分块做 log_softmax：bf16→fp32 无损，结果与整块计算等价，峰值内存明显下降",
+    "rationale": "这两条只改实现，不改变目标函数；3B 那轮不需要"
+  }
+}

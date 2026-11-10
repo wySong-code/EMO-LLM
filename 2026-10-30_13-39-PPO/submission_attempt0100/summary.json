@@ -1,0 +1,18 @@
+{
+  "rows": 734,
+  "submission": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_13-39-PPO/submission_attempt0100/submission.csv",
+  "counts": {
+    "emotion_negative": 443,
+    "uncertain_no": 606,
+    "emotion_positive": 291,
+    "uncertain_yes": 128
+  },
+  "infer": {
+    "done": 734,
+    "skipped": 0,
+    "parse_ok": 734,
+    "parse_errors": {},
+    "fallback": 0,
+    "seconds": 1127.4
+  }
+}

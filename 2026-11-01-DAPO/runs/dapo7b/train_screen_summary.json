@@ -1,0 +1,8 @@
+{
+  "n": 3352,
+  "hard": 10,
+  "errors": {
+    "emotion": 6,
+    "decision": 4
+  }
+}

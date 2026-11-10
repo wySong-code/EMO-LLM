@@ -1,0 +1,9 @@
+{
+  "stage": "evaluating",
+  "evaluation": "step_0300",
+  "completed": 666,
+  "n": 666,
+  "global_step": 300,
+  "batch_size": 4,
+  "updated_utc": "2026-10-29T10:49:45.410686+00:00"
+}

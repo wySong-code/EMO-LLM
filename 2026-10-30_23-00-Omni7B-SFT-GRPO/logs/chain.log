@@ -1,0 +1,37 @@
+[2026-10-30 16:08:18] chain started, waiting for ~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/sft_run/train/status.json
+[2026-10-30 22:14:24] SFT complete
+[2026-10-30 22:14:25] sft best checkpoint = ~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/sft_run/train/checkpoints/checkpoint-1638
+[2026-10-30 22:14:25] start CSV #1 (sft7b)
+[2026-10-30 22:14:25] card=1 adapter=~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/sft_run/train/checkpoints/checkpoint-1638 -> sft7b
+[2026-10-30 22:32:30] done
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+{"stage": "infer", "done": 734, "n": 734, "elapsed_s": 1079.2}
+INFER_DONE {"done": 734, "skipped": 0, "parse_ok": 734, "parse_errors": {}, "fallback": 0, "seconds": 1079.2}
+SUBMISSION {"rows": 734, "submission": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/submissions/sft7b/submission.csv", "counts": {"emotion_negative": 444, "uncertain_no": 604, "emotion_positive": 290, "uncertain_yes": 130}, "infer": {"done": 734, "skipped": 0, "parse_ok": 734, "parse_errors": {}, "fallback": 0, "seconds": 1079.2}}
+[2026-10-30 22:32:30] CSV #1 rc=0
+[2026-10-30 22:32:30] start GRPO
+[2026-10-30 22:32:31] adapter=~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/sft_run/train/checkpoints/checkpoint-1638
+[2026-10-30 22:32:31] cards=1,2 (policy=0 reference=1)
+[2026-10-31 01:23:42] grpo finished
+{
+  "source": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/grpo_run/pilot_01/checkpoints/step_0150",
+  "step": 150,
+  "score": 0.909924991657532,
+  "emotion_f1": 0.950931064396145,
+  "conflict_recall": 0.8243243243243243,
+  "aligned_specificity": 0.9358108108108109,
+  "floor": 0.9361436739508909,
+  "eligible": true
+}
+[2026-10-31 01:23:42] GRPO rc=0
+[2026-10-31 01:23:42] start CSV #2 (grpo7b_step50) from ~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/grpo_run/pilot_01/checkpoints/step_0050
+[2026-10-31 01:23:42] card=1 adapter=~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/grpo_run/pilot_01/checkpoints/step_0050 -> grpo7b_step50
+[2026-10-31 01:41:46] done
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+{"stage": "infer", "done": 734, "n": 734, "elapsed_s": 1078.2}
+INFER_DONE {"done": 734, "skipped": 0, "parse_ok": 734, "parse_errors": {}, "fallback": 0, "seconds": 1078.2}
+SUBMISSION {"rows": 734, "submission": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-10-30_23-00-Omni7B-SFT-GRPO/submissions/grpo7b_step50/submission.csv", "counts": {"emotion_negative": 446, "uncertain_no": 604, "emotion_positive": 288, "uncertain_yes": 130}, "infer": {"done": 734, "skipped": 0, "parse_ok": 734, "parse_errors": {}, "fallback": 0, "seconds": 1078.2}}
+[2026-10-31 01:41:46] CSV #2 rc=0
+[2026-10-31 01:41:46] chain finished

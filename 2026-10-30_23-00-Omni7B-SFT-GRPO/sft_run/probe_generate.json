@@ -1,0 +1,41 @@
+{
+  "stage": "generate",
+  "gpu": "GPU",
+  "total_gib": 23.516,
+  "free_before_gib": 23.117,
+  "base_weights_gib": 16.644,
+  "generation": [
+    {
+      "batch_size": 16,
+      "ok": true,
+      "parsed": 16,
+      "tokens": 822,
+      "seconds": 5.11,
+      "peak_gib": 21.393
+    },
+    {
+      "batch_size": 8,
+      "ok": true,
+      "parsed": 8,
+      "tokens": 822,
+      "seconds": 2.45,
+      "peak_gib": 19.023
+    },
+    {
+      "batch_size": 4,
+      "ok": true,
+      "parsed": 4,
+      "tokens": 820,
+      "seconds": 1.58,
+      "peak_gib": 17.835
+    },
+    {
+      "batch_size": 2,
+      "ok": true,
+      "parsed": 2,
+      "tokens": 816,
+      "seconds": 1.19,
+      "peak_gib": 17.24
+    }
+  ]
+}

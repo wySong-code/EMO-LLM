@@ -1,0 +1,430 @@
+{
+  "all": {
+    "n": 666,
+    "fields": {
+      "vision_emotion": {
+        "n": 666,
+        "correct": 606,
+        "accuracy": 0.9099099099099099,
+        "macro_f1_present": 0.9361800435092312,
+        "macro_f1_fixed3": 0.9361800435092312,
+        "gold_counts": {
+          "negative": 416,
+          "positive": 247,
+          "neutral": 3
+        },
+        "prediction_counts": {
+          "negative": 402,
+          "positive": 261,
+          "neutral": 3
+        }
+      },
+      "text_emotion": {
+        "n": 345,
+        "correct": 325,
+        "accuracy": 0.9420289855072463,
+        "macro_f1_present": 0.9282872636529418,
+        "macro_f1_fixed3": 0.9282872636529418,
+        "gold_counts": {
+          "negative": 185,
+          "positive": 150,
+          "neutral": 10
+        },
+        "prediction_counts": {
+          "negative": 183,
+          "positive": 152,
+          "neutral": 10
+        }
+      },
+      "audio_emotion": {
+        "n": 321,
+        "correct": 304,
+        "accuracy": 0.9470404984423676,
+        "macro_f1_present": 0.897695448257246,
+        "macro_f1_fixed3": 0.897695448257246,
+        "gold_counts": {
+          "negative": 187,
+          "positive": 132,
+          "neutral": 2
+        },
+        "prediction_counts": {
+          "negative": 183,
+          "positive": 135,
+          "neutral": 3
+        }
+      },
+      "pred_emotion": {
+        "n": 666,
+        "correct": 625,
+        "accuracy": 0.9384384384384384,
+        "macro_f1_present": 0.9358813901992876,
+        "macro_f1_fixed3": 0.623920926799525,
+        "gold_counts": {
+          "negative": 414,
+          "positive": 252
+        },
+        "prediction_counts": {
+          "negative": 385,
+          "positive": 281
+        }
+      }
+    },
+    "format_valid_n": 666,
+    "format_valid_rate": 1.0,
+    "all_fields_correct_n": 575,
+    "emotion_accuracy": 0.9384384384384384,
+    "emotion_macro_f1_present": 0.9358813901992876,
+    "emotion_macro_f1_fixed3": 0.623920926799525,
+    "conflict_n": 74,
+    "aligned_n": 592,
+    "conflict_recall": 0.7837837837837838,
+    "aligned_specificity": 0.9037162162162162,
+    "conflict_accuracy": 0.8903903903903904,
+    "conflict_f1": 0.6137566137566137,
+    "conflict_confusion": {
+      "TP": 58,
+      "TN": 535,
+      "FP": 57,
+      "FN": 16,
+      "invalid_on_conflict": 0,
+      "invalid_on_aligned": 0
+    },
+    "conflict_consistency_on_valid": 1.0,
+    "local_score_present": 0.8838190734780222,
+    "token_limit_hits": 0
+  },
+  "VT": {
+    "n": 345,
+    "fields": {
+      "vision_emotion": {
+        "n": 345,
+        "correct": 310,
+        "accuracy": 0.8985507246376812,
+        "macro_f1_present": 0.9263259936296911,
+        "macro_f1_fixed3": 0.9263259936296911,
+        "gold_counts": {
+          "negative": 221,
+          "positive": 121,
+          "neutral": 3
+        },
+        "prediction_counts": {
+          "negative": 214,
+          "positive": 128,
+          "neutral": 3
+        }
+      },
+      "text_emotion": {
+        "n": 345,
+        "correct": 325,
+        "accuracy": 0.9420289855072463,
+        "macro_f1_present": 0.9282872636529418,
+        "macro_f1_fixed3": 0.9282872636529418,
+        "gold_counts": {
+          "negative": 185,
+          "positive": 150,
+          "neutral": 10
+        },
+        "prediction_counts": {
+          "negative": 183,
+          "positive": 152,
+          "neutral": 10
+        }
+      },
+      "pred_emotion": {
+        "n": 345,
+        "correct": 321,
+        "accuracy": 0.9304347826086956,
+        "macro_f1_present": 0.92658533125266,
+        "macro_f1_fixed3": 0.6177235541684399,
+        "gold_counts": {
+          "negative": 221,
+          "positive": 124
+        },
+        "prediction_counts": {
+          "negative": 203,
+          "positive": 142
+        }
+      }
+    },
+    "format_valid_n": 345,
+    "format_valid_rate": 1.0,
+    "all_fields_correct_n": 289,
+    "emotion_accuracy": 0.9304347826086956,
+    "emotion_macro_f1_present": 0.92658533125266,
+    "emotion_macro_f1_fixed3": 0.6177235541684399,
+    "conflict_n": 64,
+    "aligned_n": 281,
+    "conflict_recall": 0.796875,
+    "aligned_specificity": 0.8825622775800712,
+    "conflict_accuracy": 0.8666666666666667,
+    "conflict_f1": 0.6891891891891891,
+    "conflict_confusion": {
+      "TP": 51,
+      "TN": 248,
+      "FP": 33,
+      "FN": 13,
+      "invalid_on_conflict": 0,
+      "invalid_on_aligned": 0
+    },
+    "conflict_consistency_on_valid": 1.0,
+    "local_score_present": 0.8788676211423442,
+    "token_limit_hits": 0
+  },
+  "VA": {
+    "n": 321,
+    "fields": {
+      "vision_emotion": {
+        "n": 321,
+        "correct": 296,
+        "accuracy": 0.9221183800623053,
+        "macro_f1_present": 0.9191003760194361,
+        "macro_f1_fixed3": 0.6127335840129574,
+        "gold_counts": {
+          "negative": 195,
+          "positive": 126
+        },
+        "prediction_counts": {
+          "negative": 188,
+          "positive": 133
+        }
+      },
+      "audio_emotion": {
+        "n": 321,
+        "correct": 304,
+        "accuracy": 0.9470404984423676,
+        "macro_f1_present": 0.897695448257246,
+        "macro_f1_fixed3": 0.897695448257246,
+        "gold_counts": {
+          "negative": 187,
+          "positive": 132,
+          "neutral": 2
+        },
+        "prediction_counts": {
+          "negative": 183,
+          "positive": 135,
+          "neutral": 3
+        }
+      },
+      "pred_emotion": {
+        "n": 321,
+        "correct": 304,
+        "accuracy": 0.9470404984423676,
+        "macro_f1_present": 0.945498127340824,
+        "macro_f1_fixed3": 0.6303320848938826,
+        "gold_counts": {
+          "negative": 193,
+          "positive": 128
+        },
+        "prediction_counts": {
+          "negative": 182,
+          "positive": 139
+        }
+      }
+    },
+    "format_valid_n": 321,
+    "format_valid_rate": 1.0,
+    "all_fields_correct_n": 286,
+    "emotion_accuracy": 0.9470404984423676,
+    "emotion_macro_f1_present": 0.945498127340824,
+    "emotion_macro_f1_fixed3": 0.6303320848938826,
+    "conflict_n": 10,
+    "aligned_n": 311,
+    "conflict_recall": 0.7,
+    "aligned_specificity": 0.9228295819935691,
+    "conflict_accuracy": 0.9158878504672897,
+    "conflict_f1": 0.34146341463414637,
+    "conflict_confusion": {
+      "TP": 7,
+      "TN": 287,
+      "FP": 24,
+      "FN": 3,
+      "invalid_on_conflict": 0,
+      "invalid_on_aligned": 0
+    },
+    "conflict_consistency_on_valid": 1.0,
+    "local_score_present": 0.8673149800691258,
+    "token_limit_hits": 0
+  },
+  "original": {
+    "n": 600,
+    "fields": {
+      "vision_emotion": {
+        "n": 600,
+        "correct": 544,
+        "accuracy": 0.9066666666666666,
+        "macro_f1_present": 0.9026414307073564,
+        "macro_f1_fixed3": 0.6017609538049042,
+        "gold_counts": {
+          "negative": 368,
+          "positive": 232
+        },
+        "prediction_counts": {
+          "negative": 354,
+          "positive": 246
+        }
+      },
+      "text_emotion": {
+        "n": 284,
+        "correct": 267,
+        "accuracy": 0.9401408450704225,
+        "macro_f1_present": 0.9370427843050322,
+        "macro_f1_fixed3": 0.6246951895366881,
+        "gold_counts": {
+          "negative": 174,
+          "positive": 110
+        },
+        "prediction_counts": {
+          "negative": 173,
+          "positive": 111
+        }
+      },
+      "audio_emotion": {
+        "n": 316,
+        "correct": 300,
+        "accuracy": 0.9493670886075949,
+        "macro_f1_present": 0.9478440272333402,
+        "macro_f1_fixed3": 0.6318960181555601,
+        "gold_counts": {
+          "negative": 187,
+          "positive": 129
+        },
+        "prediction_counts": {
+          "negative": 183,
+          "positive": 133
+        }
+      },
+      "pred_emotion": {
+        "n": 600,
+        "correct": 560,
+        "accuracy": 0.9333333333333333,
+        "macro_f1_present": 0.9314285714285715,
+        "macro_f1_fixed3": 0.620952380952381,
+        "gold_counts": {
+          "negative": 364,
+          "positive": 236
+        },
+        "prediction_counts": {
+          "negative": 336,
+          "positive": 264
+        }
+      }
+    },
+    "format_valid_n": 600,
+    "format_valid_rate": 1.0,
+    "all_fields_correct_n": 517,
+    "emotion_accuracy": 0.9333333333333333,
+    "emotion_macro_f1_present": 0.9314285714285715,
+    "emotion_macro_f1_fixed3": 0.620952380952381,
+    "conflict_n": 25,
+    "aligned_n": 575,
+    "conflict_recall": 0.4,
+    "aligned_specificity": 0.9026086956521739,
+    "conflict_accuracy": 0.8816666666666667,
+    "conflict_f1": 0.21978021978021978,
+    "conflict_confusion": {
+      "TP": 10,
+      "TN": 519,
+      "FP": 56,
+      "FN": 15,
+      "invalid_on_conflict": 0,
+      "invalid_on_aligned": 0
+    },
+    "conflict_consistency_on_valid": 1.0,
+    "local_score_present": 0.7662360248447205,
+    "token_limit_hits": 0
+  },
+  "generated": {
+    "n": 66,
+    "fields": {
+      "vision_emotion": {
+        "n": 66,
+        "correct": 62,
+        "accuracy": 0.9393939393939394,
+        "macro_f1_present": 0.9416666666666668,
+        "macro_f1_fixed3": 0.9416666666666668,
+        "gold_counts": {
+          "neutral": 3,
+          "negative": 48,
+          "positive": 15
+        },
+        "prediction_counts": {
+          "neutral": 3,
+          "negative": 48,
+          "positive": 15
+        }
+      },
+      "text_emotion": {
+        "n": 61,
+        "correct": 58,
+        "accuracy": 0.9508196721311475,
+        "macro_f1_present": 0.9384479717813051,
+        "macro_f1_fixed3": 0.9384479717813051,
+        "gold_counts": {
+          "negative": 11,
+          "positive": 40,
+          "neutral": 10
+        },
+        "prediction_counts": {
+          "negative": 10,
+          "positive": 41,
+          "neutral": 10
+        }
+      },
+      "audio_emotion": {
+        "n": 5,
+        "correct": 4,
+        "accuracy": 0.8,
+        "macro_f1_present": 0.8,
+        "macro_f1_fixed3": 0.5333333333333333,
+        "gold_counts": {
+          "neutral": 2,
+          "positive": 3
+        },
+        "prediction_counts": {
+          "neutral": 3,
+          "positive": 2
+        }
+      },
+      "pred_emotion": {
+        "n": 66,
+        "correct": 65,
+        "accuracy": 0.9848484848484849,
+        "macro_f1_present": 0.9797979797979799,
+        "macro_f1_fixed3": 0.6531986531986532,
+        "gold_counts": {
+          "negative": 50,
+          "positive": 16
+        },
+        "prediction_counts": {
+          "negative": 49,
+          "positive": 17
+        }
+      }
+    },
+    "format_valid_n": 66,
+    "format_valid_rate": 1.0,
+    "all_fields_correct_n": 58,
+    "emotion_accuracy": 0.9848484848484849,
+    "emotion_macro_f1_present": 0.9797979797979799,
+    "emotion_macro_f1_fixed3": 0.6531986531986532,
+    "conflict_n": 49,
+    "aligned_n": 17,
+    "conflict_recall": 0.9795918367346939,
+    "aligned_specificity": 0.9411764705882353,
+    "conflict_accuracy": 0.9696969696969697,
+    "conflict_f1": 0.9795918367346939,
+    "conflict_confusion": {
+      "TP": 48,
+      "TN": 16,
+      "FP": 1,
+      "FN": 1,
+      "invalid_on_conflict": 0,
+      "invalid_on_aligned": 0
+    },
+    "conflict_consistency_on_valid": 1.0,
+    "local_score_present": 0.9720118350370451,
+    "token_limit_hits": 0
+  },
+  "seconds": 426.80989870615304,
+  "batch_size": 4
+}

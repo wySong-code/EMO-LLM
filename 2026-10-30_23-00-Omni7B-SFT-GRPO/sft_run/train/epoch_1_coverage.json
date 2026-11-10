@@ -1,0 +1,12 @@
+{
+  "examples": 8730,
+  "unique_examples": 8730,
+  "counts": {
+    "full": 3352,
+    "vision_only": 2103,
+    "text_only": 1702,
+    "audio_only": 1573
+  },
+  "all_examples_once": true,
+  "step": 546
+}

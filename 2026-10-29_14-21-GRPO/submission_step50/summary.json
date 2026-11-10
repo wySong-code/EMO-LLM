@@ -1,0 +1,18 @@
+{
+  "rows": 734,
+  "submission": "~/grpo_mm/submission_step50/submission.csv",
+  "counts": {
+    "emotion_negative": 444,
+    "uncertain_no": 608,
+    "emotion_positive": 290,
+    "uncertain_yes": 126
+  },
+  "infer": {
+    "done": 734,
+    "skipped": 0,
+    "parse_ok": 734,
+    "parse_errors": {},
+    "fallback": 0,
+    "seconds": 1153.0
+  }
+}

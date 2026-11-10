@@ -1,0 +1,20 @@
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+DATA_CHECK {"train": 3352, "val": 666, "train_conflict": 411, "val_conflict": 74, "train_original_conflict": 143, "train_generated_conflict": 268}
+SAMPLER_CHECK {"hard_pool": 0, "unique_seen": 400, "draws": {"original_conflict": 324, "aligned": 200, "generated_conflict": 76}}
+Selected physical GPUs 0,1; policy=cuda:0 reference=cuda:1
+DATA_CHECK {"train": 3352, "val": 666, "train_conflict": 411, "val_conflict": 74, "train_original_conflict": 143, "train_generated_conflict": 268}
+ENV_CHECK {"python": "3.12.3", "modules": {"torch": true, "transformers": true, "peft": true, "accelerate": true, "av": true, "numpy": true, "soundfile": true, "imageio_ffmpeg": true, "PIL": true, "safetensors": true}, "versions": {"torch": "2.8.0", "transformers": "4.57.6", "peft": "0.17.1", "accelerate": "1.15.0"}, "cuda": true, "gpu": "GPU", "ready": true}
+{
+  "source": "~/grpo_mm/MM-Emotion-Combined-SFT-20261026/2026-11-01-DAPO/runs/dapo7b/checkpoints/step_0200",
+  "step": 200,
+  "score": 0.9198867345606476,
+  "emotion_f1": 0.9553140096618358,
+  "conflict_recall": 0.8648648648648649,
+  "aligned_specificity": 0.9138513513513513,
+  "floor": 0.9361436739508909,
+  "eligible": true
+}
