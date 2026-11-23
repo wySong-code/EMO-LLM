@@ -1,0 +1,483 @@
+[
+  {
+    "group": "ch_sims_v2:aqgy5_0015/00022",
+    "sample_type": "Conflict",
+    "label": "ch_sims_v2:VT:aqgy5_0015:00022",
+    "text": "你这么关心我，我真的好感动。",
+    "video": "videos/aqgy5_0015/00022.mp4",
+    "sample_vt": "ch_sims_v2:VT:aqgy5_0015:00022",
+    "sample_va": "ch_sims_v2:VA:aqgy5_0015:00022",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "positive"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "text_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "positive"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "positive"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "audio_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "positive"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0010/0026",
+    "sample_type": "Conflict",
+    "label": "ch_sims_v2:VT:video_0010:0026",
+    "text": "脸都不要了，还要什么面子",
+    "video": "videos/video_0010/0026.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0010:0026",
+    "sample_va": "ch_sims_v2:VA:video_0010:0026",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "positive",
+        "text_emotion": "negative",
+        "is_conflict": "yes",
+        "pred_emotion": "negative"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "positive",
+        "audio_emotion": "negative",
+        "is_conflict": "yes",
+        "pred_emotion": "negative"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0012/0047",
+    "sample_type": "Conflict",
+    "label": "ch_sims_v2:VT:video_0012:0047",
+    "text": "如果皇上宠幸你的话，你求个情不就行了吗？",
+    "video": "videos/video_0012/0047.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0012:0047",
+    "sample_va": "ch_sims_v2:VA:video_0012:0047",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "text_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "negative"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "audio_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "negative"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0024/0051",
+    "sample_type": "Conflict",
+    "label": "ch_sims_v2:VT:video_0024:0051",
+    "text": "我是她妈，我为她好。",
+    "video": "videos/video_0024/0051.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0024:0051",
+    "sample_va": "ch_sims_v2:VA:video_0024:0051",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "text_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "negative"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "audio_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "negative"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0025/0010",
+    "sample_type": "Conflict",
+    "label": "ch_sims_v2:VT:video_0025:0010",
+    "text": "我们在这里一个打十个。",
+    "video": "videos/video_0025/0010.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0025:0010",
+    "sample_va": "ch_sims_v2:VA:video_0025:0010",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "text_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "negative"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "audio_emotion": "positive",
+        "is_conflict": "yes",
+        "pred_emotion": "negative"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0049/0010",
+    "sample_type": "Conflict",
+    "label": "ch_sims_v2:VT:video_0049:0010",
+    "text": "没关系，我这人就喜欢被人打",
+    "video": "videos/video_0049/0010.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0049:0010",
+    "sample_va": "ch_sims_v2:VA:video_0049:0010",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "positive",
+        "text_emotion": "positive",
+        "is_conflict": "no",
+        "pred_emotion": "positive"
+      },
+      "gold": {
+        "vision_emotion": "positive",
+        "text_emotion": "negative",
+        "is_conflict": "yes",
+        "pred_emotion": "positive"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "positive",
+        "audio_emotion": "positive",
+        "is_conflict": "no",
+        "pred_emotion": "positive"
+      },
+      "gold": {
+        "vision_emotion": "positive",
+        "audio_emotion": "negative",
+        "is_conflict": "yes",
+        "pred_emotion": "positive"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:aqgy3_0002/00007",
+    "sample_type": "Conflict",
+    "label": "ch_sims_v2:VT:aqgy3_0002:00007",
+    "text": "我想，或许我的幸福并不在这儿，所以我就决定去台北散散心。",
+    "video": "videos/aqgy3_0002/00007.mp4",
+    "sample_vt": "ch_sims_v2:VT:aqgy3_0002:00007",
+    "sample_va": "ch_sims_v2:VA:aqgy3_0002:00007",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "positive",
+        "text_emotion": "positive",
+        "is_conflict": "no",
+        "pred_emotion": "positive"
+      },
+      "gold": {
+        "vision_emotion": "positive",
+        "text_emotion": "negative",
+        "is_conflict": "yes",
+        "pred_emotion": "positive"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "positive",
+        "audio_emotion": "positive",
+        "is_conflict": "no",
+        "pred_emotion": "positive"
+      },
+      "gold": {
+        "vision_emotion": "positive",
+        "audio_emotion": "negative",
+        "is_conflict": "yes",
+        "pred_emotion": "positive"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0001/0003",
+    "sample_type": "Aligned",
+    "label": "ch_sims_v2:VT:video_0001:0003",
+    "text": "我不想嫁入什么豪门，我们不就是豪门吗？",
+    "video": "videos/video_0001/0003.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0001:0003",
+    "sample_va": "ch_sims_v2:VA:video_0001:0003",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0001/0008",
+    "sample_type": "Aligned",
+    "label": "ch_sims_v2:VT:video_0001:0008",
+    "text": "我刚才是一害怕我就跟对方撒了个谎",
+    "video": "videos/video_0001/0008.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0001:0008",
+    "sample_va": "ch_sims_v2:VA:video_0001:0008",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0001/0016",
+    "sample_type": "Aligned",
+    "label": "ch_sims_v2:VT:video_0001:0016",
+    "text": "我爸想自杀骗保，追求对方是我爸活下去的唯一希望",
+    "video": "videos/video_0001/0016.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0001:0016",
+    "sample_va": "ch_sims_v2:VA:video_0001:0016",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0001/0021",
+    "sample_type": "Aligned",
+    "label": "ch_sims_v2:VT:video_0001:0021",
+    "text": "巧了，人事科正好缺了一个副科长。",
+    "video": "videos/video_0001/0021.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0001:0021",
+    "sample_va": "ch_sims_v2:VA:video_0001:0021",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "positive",
+        "text_emotion": "positive",
+        "is_conflict": "no",
+        "pred_emotion": "positive"
+      },
+      "gold": {
+        "vision_emotion": "positive",
+        "text_emotion": "positive",
+        "is_conflict": "no",
+        "pred_emotion": "positive"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "positive",
+        "audio_emotion": "positive",
+        "is_conflict": "no",
+        "pred_emotion": "positive"
+      },
+      "gold": {
+        "vision_emotion": "positive",
+        "audio_emotion": "positive",
+        "is_conflict": "no",
+        "pred_emotion": "positive"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0001/0029",
+    "sample_type": "Aligned",
+    "label": "ch_sims_v2:VT:video_0001:0029",
+    "text": "在他们眼里，对方根本就不是一个人，而是一堆钞票。",
+    "video": "videos/video_0001/0029.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0001:0029",
+    "sample_va": "ch_sims_v2:VA:video_0001:0029",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    }
+  },
+  {
+    "group": "ch_sims_v2:video_0002/0021",
+    "sample_type": "Aligned",
+    "label": "ch_sims_v2:VT:video_0002:0021",
+    "text": "我这是自家小球队，我也没有办法。",
+    "video": "videos/video_0002/0021.mp4",
+    "sample_vt": "ch_sims_v2:VT:video_0002:0021",
+    "sample_va": "ch_sims_v2:VA:video_0002:0021",
+    "VT": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "text_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    },
+    "VA": {
+      "prediction": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      },
+      "gold": {
+        "vision_emotion": "negative",
+        "audio_emotion": "negative",
+        "is_conflict": "no",
+        "pred_emotion": "negative"
+      }
+    }
+  }
+]

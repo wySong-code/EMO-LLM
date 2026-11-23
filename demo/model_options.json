@@ -1,0 +1,18 @@
+{
+  "models": [
+    {
+      "id": "qwen-omni-3b",
+      "label": "Qwen2.5-Omni-3B",
+      "base_model": "Qwen/Qwen2.5-Omni-3B",
+      "base_path": "base_3b",
+      "adapters": [
+        {
+          "id": "combined-sft-1638",
+          "label": "Combined SFT / checkpoint-1638",
+          "repo_id": "xiaomoqingfeng/MM-Emotion-Qwen2.5-Omni-3B-SFT-Combined-20261026",
+          "path": "model_3b"
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 base_model/
 model_repo/
 .hf-cache/
+demo_assets/
 
 # ─── 训练数据与媒体素材（2.6 GB + 1.3 GB，不可随仓库分发）─────────
 training_dataset/

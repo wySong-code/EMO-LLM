@@ -2,6 +2,8 @@
 
 在 Qwen2.5-Omni（3B / 7B）上做**单模型四字段结构化输出**的多模态情感理解，后训练方法覆盖 SFT 与 GRPO / PPO / DAPO。
 
+> 本地 Demo：见 [`demo/README.md`](demo/README.md)，单进程 Gradio，支持模型/LoRA 选择和样本切换。
+
 ---
 
 ## 一、任务描述
